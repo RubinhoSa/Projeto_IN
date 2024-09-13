@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de controle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background">
+        <div class="box_login">
+            <div id="loginSection">
+                <div class="title_acesso">Acessar o Painel de Administrador</div>
+                <div class="form">
+                    <form id="loginForm">
+                        <label for="nome_usuario">Usuário</label>
+                        <input id="nome_usuario" type="text" name="Usuario" placeholder="Digite seu Usuário" required><br><br>
+
+                        <label for="senha_usuario">Senha</label>
+                        <input id="senha_usuario" type="password" name="Senha" placeholder="Digite sua senha" required><br><br>
+
+                        <button type="submit">Entrar</button>
+                    </form>
+                    <a href="#" id="showRegisterForm">Cadastre-se</a>
+                </div>
+            </div>
+
+            <div id="registerSection" class="hidden">
+                <div class="title_acesso">Cadastro</div>
+                <div class="form">
+                    <form id="registerFormContent">
+                        <label for="nome_completo">Usuario</label>
+                        <input id="nome_completo" type="text" name="nome_completo" placeholder="Digite seu Usuario" required><br><br>
+
+                        <label for="email">Email</label>
+                        <input id="email" type="email" name="email" placeholder="Digite seu email" required><br><br>
+
+                        <label for="senha">Senha</label>
+                        <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required><br><br>
+                        <label for="idade">Idade</label>
+                        <input id="idade" type="number" name="idade" placeholder="Digite sua idade" required><br><br>
+
+                        <label for="telefone">Telefone</label>
+                        <input id="telefone" type="tel" name="telefone" placeholder="Digite seu telefone" required><br><br>
+
+                        <label for="cargo">Cargo</label>
+                        <select id="cargo" name="cargo" required>
+                            <option value="" disabled selected>Selecione seu cargo</option>
+                            <option value="Funcionario">Funcionário</option>
+                            <option value="Gerente">Gerente</option>
+                            <option value="Administrador">Administrador</option>
+                        </select><br><br>
+
+                        <button type="submit">Cadastrar</button>
+                        <a href="#" id="showLoginForm">Voltar para Login</a>
+                    </form>
+                </div>
+            </div>
+
+            <div id="message"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sql.js/dist/sql-wasm.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

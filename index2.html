@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Administração</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <header>
+        <h1>Gerenciamento de Estoques</h1>
+        <button id="showAddFormBtn" class="hidden">Adicionar Produto</button>
+        <button id="logoutBtn">Sair</button>
+    </header>
+    
+    <main>
+        <section id="addForm" class="hidden">
+            <h2>Adicionar Recurso</h2>
+            <form id="resourceForm">
+                <input type="hidden" id="resourceId">
+                
+                <label for="code">Código:</label>
+                <input type="text" id="code" required>
+
+                <label for="category">Categoria:</label>
+                <input type="text" id="category" required>
+
+                <label for="name">Nome do Produto:</label>
+                <input type="text" id="name" required>
+
+                <label for="quantity">Quantidade:</label>
+                <input type="number" id="quantity" required>
+
+                <label for="description">Descrição do Produto:</label>
+                <textarea id="description"></textarea>
+                
+                <button type="submit">Salvar</button>
+                <button type="button" id="cancelBtn">Cancelar</button>
+            </form>
+        </section>
+        
+        <section id="resourceList">
+            <h2>Estoque</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Categoria</th>
+                        <th>Nome do Produto</th>
+                        <th>Quantidade</th>
+                        <th>Descrição do Produto</th>
+                        <th>Edição</th>
+                    </tr>
+                </thead>
+                <tbody id="resourcesTableBody">
+                </tbody>
+            </table>
+        </section>
+
+        <section id="notification">
+            <h2>Notificações</h2>
+            <ul id="notificationList">
+            </ul>
+        </section>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
